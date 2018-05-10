@@ -2,10 +2,10 @@
   <v-container grid-list-md text-xs-center>
     <v-layout row wrap>
       <v-flex xs12>
-        <v-text-field label="From string" v-model="from"></v-text-field>
+        <v-text-field label="From Base64 Encoded" v-model="from"></v-text-field>
       </v-flex>
       <v-flex md8>
-        <v-text-field label="Base64 Encoded string" v-model="to"></v-text-field>
+        <v-text-field label="Decoded string" v-model="to"></v-text-field>
       </v-flex>
       <v-flex md4>
         <v-btn color="info" v-clipboard="to">
