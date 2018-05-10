@@ -1,7 +1,7 @@
 {
-  "name": "tooler",
+  "name": "lefuturiste_tools",
   "version": "1.0.0",
-  "description": "Tooler is the app centralisaling all useful tools for dev",
+  "description": "Tools is the app centralisaling all useful tools for dev",
   "author": "Le_Futuriste <spamfree@matthieubessat.fr>",
   "private": true,
   "scripts": {

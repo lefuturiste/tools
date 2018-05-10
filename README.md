@@ -1,6 +1,14 @@
-# tooler
+# Le_Futuriste's tools
 
-> Tooler is the app centralisaling all useful tools for dev
+> Tools is the app centralisaling all useful tools for dev
+
+## Made with
+
+- vuejs
+- vuetify
+- axios
+- webpack
+- and more!
 
 ## Build Setup
 
