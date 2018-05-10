@@ -5,6 +5,7 @@ import Base64Encode from '@/components/Base64Encode'
 import Base64Decode from '@/components/Base64Decode'
 import DiscordWebhook from '@/components/DiscordWebhook'
 import UnixEpochLive from '@/components/UnixEpochLive'
+import JsonViewer from '@/components/JsonViewer'
 import Hash from '@/components/Hash'
 
 Vue.use(Router)
@@ -41,6 +42,11 @@ export default new Router({
       path: '/discord_webhook',
       name: 'DiscordWebhook',
       component: DiscordWebhook
+    },
+    {
+      path: '/json_viewer',
+      name: 'JsonViewer',
+      component: JsonViewer
     }
   ]
 })

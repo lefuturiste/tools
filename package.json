@@ -12,6 +12,8 @@
   "dependencies": {
     "apache-crypt": "^1.2.1",
     "axios": "^0.18.0",
+    "cryptmd5": "^0.1.2",
+    "jsoneditor": "^5.15.0",
     "md5": "^2.2.1",
     "moment": "^2.22.1",
     "sha.js": "^2.4.11",

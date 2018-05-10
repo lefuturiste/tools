@@ -26,6 +26,7 @@
 var shajs = require('sha.js')
 var apacheCrypt = require("apache-crypt");
 var md5 = require('md5');
+var CryptMD5 = require('cryptmd5');
 export default {
   data() {
     return {
@@ -50,6 +51,10 @@ export default {
         {
           text: 'Apache Crypt',
           value: "apache-crypt"
+        },
+        {
+          text: 'MD5 Crypt',
+          value: "md5-crypt"
         }
       ],
       alghorithm_used: "sha256"
@@ -81,6 +86,10 @@ export default {
 
         case "apache-crypt":
           this.to = apacheCrypt(from)
+          break;
+
+        case "md5-crypt":
+          this.to = CryptMD5.cryptMD5(from)
           break;
       }
     }

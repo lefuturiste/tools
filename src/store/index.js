@@ -54,6 +54,13 @@ export const store = new Vuex.Store({
               description: "Debug and send message with discord webhook",
               icon: 'fab fa-discord',
               indexRoute: "DiscordWebhook"
+          },
+          {
+              id: 'json_viewer',
+              title: "JsonViewer",
+              description: "Better view for json",
+              icon: 'pageview',
+              indexRoute: "JsonViewer"
           }
         ],
         alert: {
