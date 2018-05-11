@@ -6,11 +6,35 @@
             app
     >
       <v-list dense>
+        <template v-for="module in $store.state.modules">
+          <v-list-group
+            v-if="module.subNav != false"
+            :prepend-icon="module.icon"
+            v-model="module.actived"
+          >
+            <v-list-tile slot="activator">
+            <v-list-tile-content>
+              <v-list-tile-title>{{ module.title }}</v-list-tile-title>
+            </v-list-tile-content>
+            </v-list-tile>
+            <v-list-tile v-for="subItem in module.subNav" v-bind:data="subItem"
+                  v-bind:key="subItem.id"
+                  :to="{name: subItem.indexRoute}"
+                         ripple>
+             <v-list-tile-action>
+                <v-icon></v-icon>
+              </v-list-tile-action>
+              <v-list-tile-content>
+                <v-list-tile-title>
+                  {{ subItem.title }}
+                </v-list-tile-title>
+              </v-list-tile-content>
+            </v-list-tile>
+          </v-list-group>
           <v-list-tile :to="{name: module.indexRoute}"
-                       v-for="module in $store.state.modules" v-bind:data="module"
-                       v-bind:key="module.id"
                        ripple
-                       exact>
+                       exact
+                       v-if="module.subNav == false">
               <v-list-tile-action>
                   <v-icon>{{ module.icon }}</v-icon>
               </v-list-tile-action>
@@ -18,6 +42,7 @@
                   <v-list-tile-title>{{ module.title }}</v-list-tile-title>
               </v-list-tile-content>
           </v-list-tile>
+        </template>
       </v-list>
     </v-navigation-drawer>
     <v-toolbar color="cyan" fixed app>

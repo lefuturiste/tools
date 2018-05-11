@@ -5,7 +5,7 @@
         <v-text-field label="From string" v-model="from"></v-text-field>
       </v-flex>
       <v-flex md8>
-        <v-text-field label="Base64 Encoded string" v-model="to"></v-text-field>
+        <v-text-field label="Hex Encoded string" v-model="to"></v-text-field>
       </v-flex>
       <v-flex md4>
         <v-btn color="info"  v-clipboard="to">
@@ -18,9 +18,6 @@
 </template>
 
 <script>
-import {
-  Base64
-} from 'js-base64';
 export default {
   data() {
     return {
@@ -29,15 +26,21 @@ export default {
     }
   },
   mounted() {
-    this.$store.commit('SET_CURRENT_MODULE', this.$store.state.modules.filter(function(element) {
-      return element.id == 'base64group'
-    })[0].subNav.filter(function(element) {
-      return element.id == 'base64encode'
-    })[0])
+      this.$store.commit('SET_CURRENT_MODULE', this.$store.state.modules.filter(function(element) {
+        return element.id == 'hexGroup'
+      })[0].subNav.filter(function(element) {
+        return element.id == 'hexEncode'
+      })[0])
   },
   watch: {
     from: function(from) {
-      this.to = Base64.encode(from)
+      var input = from;
+      this.to = "";
+      for (var i = 0; i < input.length; i++) {
+        var e = input[i].charCodeAt(0);
+        var s = "";
+        this.to += e.toString(16);
+      }
     }
   }
 }

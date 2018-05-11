@@ -18,49 +18,120 @@ export const store = new Vuex.Store({
               title: "Index",
               description: "List of all tools",
               icon: 'dashboard',
-              indexRoute: "Index"
+              indexRoute: "Index",
+              subNav: false
           },
           {
-              id: 'base64encode',
-              title: "Base64 Encoder",
-              description: "Encode string in base64",
+              id: 'base64group',
+              title: "Base64",
+              description: "Encode/Decode string and base64",
               icon: 'code',
-              indexRoute: "Base64Encode"
+              indexRoute: false,
+              actived: false,
+              subNav: [
+                {
+                  id: 'base64encode',
+                  title: "Base64 Encoder",
+                  description: "Encode string in base64",
+                  icon: 'code',
+                  indexRoute: "Base64Encode",
+                },
+                {
+                  id: 'base64decode',
+                  title: "Base64 Decoder",
+                  description: "Decode string from base64",
+                  icon: 'code',
+                  indexRoute: "Base64Decode"
+                }
+              ]
           },
           {
-              id: 'base64decode',
-              title: "Base64 Decoder",
-              description: "Decode string from base64",
+              id: 'binaryGroup',
+              title: "Binary",
+              description: "Encode/Decode binary and string",
               icon: 'code',
-              indexRoute: "Base64Decode"
+              indexRoute: false,
+              actived: false,
+              subNav: [
+                {
+                  id: 'binaryEncode',
+                  title: "Binary Encoder",
+                  description: "Encode string in binary",
+                  icon: 'code',
+                  indexRoute: "BinaryEncode",
+                },
+                {
+                  id: 'binaryDecode',
+                  title: "Binary Decoder",
+                  description: "Decode string from binary",
+                  icon: 'code',
+                  indexRoute: "BinaryDecode"
+                }
+              ]
+          },
+          {
+              id: 'hexGroup',
+              title: "Hex",
+              description: "Encode/Decode hex and string",
+              icon: 'code',
+              indexRoute: false,
+              actived: false,
+              subNav: [
+                {
+                  id: 'hexEncode',
+                  title: "Hex Encoder",
+                  description: "Encode string in hex",
+                  icon: 'code',
+                  indexRoute: "HexEncode",
+                },
+                {
+                  id: 'hexDecode',
+                  title: "Hex Decoder",
+                  description: "Decode string from hex",
+                  icon: 'code',
+                  indexRoute: "HexDecode"
+                }
+              ]
           },
           {
               id: 'hash',
               title: "Hash string",
               description: "Hash string with many alghorithms available",
               icon: 'fas fa-hashtag',
-              indexRoute: "Hash"
+              indexRoute: "Hash",
+              subNav: false
+          },
+          {
+              id: 'random_generator',
+              title: "Random string generator",
+              description: "Generate many and many random string",
+              icon: 'fas fa-random',
+              indexRoute: "RandomGenerator",
+              subNav: false
           },
           {
               id: 'unix_epoch_live',
               title: "Unix epoch live",
               description: "Watch live the unix epoch",
               icon: 'access_time',
-              indexRoute: "UnixEpochLive"
+              indexRoute: "UnixEpochLive",
+              subNav: false
           },
           {
               id: 'discord_webhook',
               title: "Discord webhook",
               description: "Debug and send message with discord webhook",
               icon: 'fab fa-discord',
-              indexRoute: "DiscordWebhook"
+              indexRoute: "DiscordWebhook",
+              subNav: false
           },
           {
-              id: 'json_viewer',
-              title: "JsonViewer",
-              description: "Better view for json",
-              icon: 'pageview',
-              indexRoute: "JsonViewer"
+              id: 'string_statistics',
+              title: "String statistics",
+              description: "Get information about a string",
+              icon: 'insert_chart',
+              indexRoute: "StringStatistics",
+              subNav: false
           }
         ],
         alert: {
