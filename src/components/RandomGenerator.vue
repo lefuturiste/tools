@@ -56,7 +56,11 @@ export default {
       rules: {
         number: function(val) {
           if (!isNaN(parseFloat(val)) && isFinite(val)) {
-            return true
+              if (val > 0) {
+                return true
+              }else{
+                return "You must supply a number greater than 0"
+              }
           }else{
             return "You must provide a digit"
           }
