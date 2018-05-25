@@ -31,7 +31,7 @@
               </v-list-tile-content>
             </v-list-tile>
           </v-list-group>
-          <v-list-tile :to="{name: module.indexRoute}"
+          <v-list-tile :to="{name: module.indexRoute} "
                        ripple
                        exact
                        v-if="module.subNav == false">
