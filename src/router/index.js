@@ -10,6 +10,7 @@ import HexDecode from '@/components/HexDecode'
 import DiscordWebhook from '@/components/DiscordWebhook'
 import UnixEpochLive from '@/components/UnixEpochLive'
 import StringStatistics from '@/components/StringStatistics'
+import QrCodeGenerator from '@/components/QrCodeGenerator'
 import RandomGenerator from '@/components/RandomGenerator'
 import Hash from '@/components/Hash'
 import NotFound from '@/components/NotFound'
@@ -78,6 +79,11 @@ export default new Router({
       path: '/string_statistics',
       name: 'StringStatistics',
       component: StringStatistics
+    },
+    {
+      path: '/qrcode_generator',
+      name: 'QrCodeGenerator',
+      component: QrCodeGenerator
     },
     {
       path: '*',

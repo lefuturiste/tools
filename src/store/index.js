@@ -132,6 +132,14 @@ export const store = new Vuex.Store({
               icon: 'insert_chart',
               indexRoute: "StringStatistics",
               subNav: false
+          },
+          {
+              id: 'qrcode_generator',
+              title: "QR Code generator",
+              description: "Generate QR Code from a string",
+              icon: 'fas fa-qrcode',
+              indexRoute: "QrCodeGenerator",
+              subNav: false
           }
         ],
         alert: {
