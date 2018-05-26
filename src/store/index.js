@@ -94,6 +94,30 @@ export const store = new Vuex.Store({
               ]
           },
           {
+              id: 'urlGroup',
+              title: "Url",
+              description: "Encode/Decode url",
+              icon: 'fas fa-compass',
+              indexRoute: false,
+              actived: false,
+              subNav: [
+                {
+                  id: 'urlEncode',
+                  title: "Url Encoder",
+                  description: "Encode string in url",
+                  icon: 'code',
+                  indexRoute: "UrlEncode",
+                },
+                {
+                  id: 'urlDecode',
+                  title: "Url Decoder",
+                  description: "Decode string from url",
+                  icon: 'code',
+                  indexRoute: "UrlDecode"
+                }
+              ]
+          },
+          {
               id: 'hash',
               title: "Hash string",
               description: "Hash string with many alghorithms available",

@@ -3,6 +3,8 @@ import Router from 'vue-router'
 import Index from '@/components/Index'
 import Base64Encode from '@/components/Base64Encode'
 import Base64Decode from '@/components/Base64Decode'
+import UrlEncode from '@/components/UrlEncode'
+import UrlDecode from '@/components/UrlDecode'
 import BinaryEncode from '@/components/BinaryEncode'
 import BinaryDecode from '@/components/BinaryDecode'
 import HexEncode from '@/components/HexEncode'
@@ -34,6 +36,16 @@ export default new Router({
       path: '/base64decode',
       name: 'Base64Decode',
       component: Base64Decode
+    },
+    {
+      path: '/url_encode',
+      name: 'UrlEncode',
+      component: UrlEncode
+    },
+    {
+      path: '/url_decode',
+      name: 'UrlDecode',
+      component: UrlDecode
     },
     {
       path: '/binary_encode',
