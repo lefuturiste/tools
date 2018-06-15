@@ -15,6 +15,7 @@ import StringStatistics from '@/components/StringStatistics'
 import QrCodeGenerator from '@/components/QrCodeGenerator'
 import RandomGenerator from '@/components/RandomGenerator'
 import Hash from '@/components/Hash'
+import Gravatar from '@/components/Gravatar'
 import NotFound from '@/components/NotFound'
 
 Vue.use(Router)
@@ -96,6 +97,11 @@ export default new Router({
       path: '/qrcode_generator',
       name: 'QrCodeGenerator',
       component: QrCodeGenerator
+    },
+    {
+      path: '/gravatar',
+      name: 'Gravatar',
+      component: Gravatar
     },
     {
       path: '*',

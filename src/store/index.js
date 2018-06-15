@@ -164,7 +164,15 @@ export const store = new Vuex.Store({
               icon: 'fas fa-qrcode',
               indexRoute: "QrCodeGenerator",
               subNav: false
-          }
+          },
+          {
+              id: 'gravatar',
+              title: "Gravatar",
+              description: "Get the avatar of a email registered on gravatar",
+              icon: 'image',
+              indexRoute: "Gravatar",
+              subNav: false
+          },
         ],
         alert: {
             color: '',
