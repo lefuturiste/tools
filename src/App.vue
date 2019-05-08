@@ -8,6 +8,7 @@
       <v-list dense>
         <template v-for="module in $store.state.modules">
           <v-list-group
+            :key="module.id + '_main_module'"
             v-if="module.subNav != false"
             :prepend-icon="module.icon"
             v-model="module.actived"
@@ -34,6 +35,7 @@
           <v-list-tile :to="{name: module.indexRoute} "
                        ripple
                        exact
+                       :key="module.id + '_sub_module'"
                        v-if="module.subNav == false">
               <v-list-tile-action>
                   <v-icon>{{ module.icon }}</v-icon>
