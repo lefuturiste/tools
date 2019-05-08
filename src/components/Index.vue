@@ -16,6 +16,7 @@
       <v-list dense>
     <template v-for="module in $store.state.modules">
       <v-list-group
+        :key="module.id + '_main'"
         v-if="module.subNav != false"
         v-model="module.actived"
       >
@@ -43,6 +44,7 @@
         </v-list-tile>
       </v-list-group>
       <v-list-tile :to="{name: module.indexRoute}"
+                   :key="module.id + '_sub'"
                    ripple
                    exact
                    avatar
@@ -55,7 +57,7 @@
               <v-list-tile-sub-title>{{ module.description }}</v-list-tile-sub-title>
           </v-list-tile-content>
       </v-list-tile>
-      <v-divider></v-divider>
+      <v-divider :key="module.id + '_divider'" />
     </template>
   </v-list>
   </div>
