@@ -87,6 +87,11 @@ export default new Router({
       component: () => import( /* webpackChunkName: "gravatar" */ './components/Gravatar.vue')
     },
     {
+      path: '/image_resize',
+      name: 'ImageResize',
+      component: () => import( /* webpackChunkName: "imageResize" */ './components/ImageResize.vue')
+    },
+    {
       path: '*',
       component: () => import( /* webpackChunkName: "notFound" */ './components/NotFound.vue')
     }

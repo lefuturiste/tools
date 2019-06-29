@@ -173,6 +173,14 @@ export const store = new Vuex.Store({
               indexRoute: "Gravatar",
               subNav: false
           },
+          {
+            id: 'image_resize',
+            title: "Resize image",
+            description: "Resize an image in the browser",
+            icon: 'crop',
+            indexRoute: "ImageResize",
+            subNav: false
+          }
         ],
         alert: {
             color: '',
