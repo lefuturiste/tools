@@ -92,6 +92,11 @@ export default new Router({
       component: () => import( /* webpackChunkName: "imageResize" */ './components/ImageResize.vue')
     },
     {
+      path: '/jwt_decode',
+      name: 'JwtDecode',
+      component: () => import( /* webpackChunkName: "jwtDecode" */ './components/JwtDecode.vue')
+    },
+    {
       path: '*',
       component: () => import( /* webpackChunkName: "notFound" */ './components/NotFound.vue')
     }

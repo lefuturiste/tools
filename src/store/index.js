@@ -180,6 +180,14 @@ export const store = new Vuex.Store({
             icon: 'crop',
             indexRoute: "ImageResize",
             subNav: false
+          },
+          {
+            id: 'jwt_decode',
+            title: "JWT Decoder",
+            description: "Decode a Json Web Token",
+            icon: 'vpn_key',
+            indexRoute: "JwtDecode",
+            subNav: false
           }
         ],
         alert: {
