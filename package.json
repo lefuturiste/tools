@@ -2,7 +2,7 @@
   "name": "lefuturiste_tools",
   "version": "1.0.0",
   "description": "Tools is the app centralisaling all useful tools for dev",
-  "author": "Le_Futuriste <spamfree@matthieubessat.fr>",
+  "author": "Le_Futuriste <contact@lefuturiste.fr>",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
